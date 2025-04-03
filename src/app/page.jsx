@@ -21,7 +21,15 @@ export default function Home() {
   return (
     <div className={styles.container}>
       {/* COMPONENTE: Header */}
-      <Header />
+      <Header
+      logoText={"MemeVerse"}
+      logoImagem={"🌟"}
+      navItem1={"Home"}
+      navItem2={"Trending"}
+      navItem3={"Create"}
+      navItem4={"Categories"}
+      navItem5={"Profile"}
+       />
       {/* FIM COMPONENTE: Header */}
 
       <div className={styles.mainContent}>
@@ -59,7 +67,13 @@ export default function Home() {
       </div>
 
       {/* COMPONENTE: Footer */}
-      <Footer />
+      <Footer
+      footerData={"© 2025 MemeVerse - Todos os direitos reservados"}
+      socialLinks1={"📱"}
+      socialLinks2={"📘"}
+      socialLinks3={"📸"}
+      socialLinks4={"🐦"}
+      />
       {/* FIM COMPONENTE: Footer */}
     </div>
   );

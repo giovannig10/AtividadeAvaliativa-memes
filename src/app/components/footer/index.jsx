@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./footer.module.css";
 
-const Footer = () => {
+const Footer = ({footerData, socialLinks1, socialLinks2, socialLinks3, socialLinks4 }) => {
     return (
         <footer className={styles.footer}>
         <div className={styles.footerTop}>
@@ -55,19 +55,19 @@ const Footer = () => {
         </div>
 
         <div className={styles.footerBottom}>
-          <p>© 2025 MemeVerse - Todos os direitos reservados</p>
+          <p>{footerData}</p>
           <div className={styles.socialLinks}>
             <a href="#" className={styles.socialLink}>
-              <span>📱</span>
+              <span>{socialLinks1}</span>
             </a>
             <a href="#" className={styles.socialLink}>
-              <span>📘</span>
+              <span>{socialLinks2}</span>
             </a>
             <a href="#" className={styles.socialLink}>
-              <span>📸</span>
+              <span>{socialLinks3}</span>
             </a>
             <a href="#" className={styles.socialLink}>
-              <span>🐦</span>
+              <span>{socialLinks4}</span>
             </a>
           </div>
         </div>

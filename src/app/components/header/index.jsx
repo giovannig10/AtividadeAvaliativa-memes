@@ -1,21 +1,20 @@
 import React from 'react';
 import styles from './header.module.css';
 
-const Header = () => {
+const Header = ({logoText, logoImagem, navItem1, navItem2, navItem3, navItem4, navItem5}) => {
   return (
     <header className={styles.header}>
         <div className={styles.logo}>
-          <h1>MemeVerse</h1>
-          <span>🌟</span>
+          <h1>{logoText}</h1>
+          <span>{logoImagem}</span>
         </div>
         <nav className={styles.nav}>
-          <a href="#" className={styles.active}>
-            Home
+          <a href="#" className={styles.active}>{navItem1}
           </a>
-          <a href="#">Trending</a>
-          <a href="#">Create</a>
-          <a href="#">Categories</a>
-          <a href="#">Profile</a>
+          <a href="#">{navItem2}</a>
+          <a href="#">{navItem3}</a>
+          <a href="#">{navItem4}</a>
+          <a href="#">{navItem5}</a>
         </nav>
 
         <div className={styles.userActions}>
