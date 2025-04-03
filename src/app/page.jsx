@@ -6,7 +6,7 @@ import CategoriesSection from "./components/categoriesSection";
 import Feed from "./components/feed";
 import FeaturedMemes from "./components/featuredMemes";
 import CreatorsSection from "./components/creatorsSection";
-import { News_Cycle } from "next/font/google";
+import InterectionBar from "./components/interectionbar";
 import Newsletter from "./components/newsLetter";
 import Sidebar from "./components/sidebar";
 
@@ -37,6 +37,8 @@ export default function Home() {
           {/* COMPONENTE: Feed */}
          <Feed />
           {/* FIM COMPONENTE: Feed */}
+
+          
 
           {/* COMPONENTE: FeaturedMemesSection */}
           <FeaturedMemes />
