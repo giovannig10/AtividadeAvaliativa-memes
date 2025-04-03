@@ -5,35 +5,13 @@ import HeroSection from "./components/heroSection";
 import CategoriesSection from "./components/categoriesSection";
 import Feed from "./components/feed";
 import FeaturedMemes from "./components/featuredMemes";
+import CreatorsSection from "./components/creatorsSection";
 
 
 export default function Home() {
 
 
-  // Array de criadores em destaque
-  const topCreators = [
-    {
-      id: 1,
-      name: "MemeQueen",
-      avatar: "https://i.pravatar.cc/150?img=23",
-      followers: "245K",
-      bio: "Criando memes que fazem seu dia melhor!",
-    },
-    {
-      id: 2,
-      name: "FunnyGuy42",
-      avatar: "https://i.pravatar.cc/150?img=24",
-      followers: "189K",
-      bio: "Especialista em memes de programação e gatos",
-    },
-    {
-      id: 3,
-      name: "LaughFactory",
-      avatar: "https://i.pravatar.cc/150?img=25",
-      followers: "327K",
-      bio: "Se não te fizer rir, devolvo seu tempo!",
-    },
-  ];
+  
 
   // Eventos próximos
   const upcomingEvents = [
@@ -76,30 +54,7 @@ export default function Home() {
           {/* FIM COMPONENTE: FeaturedMemesSection */}
           
           {/* COMPONENTE: CreatorsSection */}
-          <section className={styles.creatorsSection}>
-            <h2 className={styles.sectionTitle}>Criadores em Destaque</h2>
-            <div className={styles.creatorsGrid}>
-              {topCreators.map((creator) => (
-                // COMPONENTE: CreatorCard
-                <div key={creator.id} className={styles.creatorCard}>
-                  <img
-                    src={creator.avatar}
-                    alt={creator.name}
-                    className={styles.creatorAvatar}
-                  />
-                  <h3 className={styles.creatorName}>{creator.name}</h3>
-                  <p className={styles.creatorBio}>{creator.bio}</p>
-                  <div className={styles.creatorStats}>
-                    <span className={styles.creatorFollowers}>
-                      {creator.followers} seguidores
-                    </span>
-                  </div>
-                  <button className={styles.followButton}>Seguir</button>
-                </div>
-                // FIM COMPONENTE: CreatorCard
-              ))}
-            </div>
-          </section>
+          <CreatorsSection />
           {/* FIM COMPONENTE: CreatorsSection */}
 
           {/* COMPONENTE: NewsletterSection */}
