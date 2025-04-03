@@ -1,4 +1,8 @@
+import Header from "./components/header";
 import styles from "./page.module.css";
+import Footer from "./components/footer";
+import HeroSection from "./components/heroSection";
+
 
 export default function Home() {
   // Array de dados dos memes para serem passados como props
@@ -71,19 +75,6 @@ export default function Home() {
       category: "Relacionamentos",
     },
   ];
-
-  // Dados para o meme do dia (hero section)
-  const memeOfTheDay = {
-    id: 7,
-    title: "Meme do Dia: Quando seu código funciona de primeira",
-    description:
-      "Este momento raro que todos os desenvolvedores sonham em experimentar!",
-    image: "https://i.imgur.com/vldGJnz.jpg",
-    likes: 2452,
-    comments: 387,
-    author: "SuperCoder",
-    authorAvatar: "https://i.pravatar.cc/150?img=20",
-  };
 
   // Array de criadores em destaque
   const topCreators = [
@@ -167,61 +158,13 @@ export default function Home() {
   return (
     <div className={styles.container}>
       {/* COMPONENTE: Header */}
-      <header className={styles.header}>
-        <div className={styles.logo}>
-          <h1>MemeVerse</h1>
-          <span>🌟</span>
-        </div>
-        <nav className={styles.nav}>
-          <a href="#" className={styles.active}>
-            Home
-          </a>
-          <a href="#">Trending</a>
-          <a href="#">Create</a>
-          <a href="#">Categories</a>
-          <a href="#">Profile</a>
-        </nav>
-
-        <div className={styles.userActions}>
-          <button className={styles.notificationBtn}>🔔</button>
-          <button className={styles.userAvatar}>
-            <img src="https://i.pravatar.cc/150?img=3" alt="Your profile" />
-          </button>
-        </div>
-      </header>
+      <Header />
       {/* FIM COMPONENTE: Header */}
 
       <div className={styles.mainContent}>
         <div className={styles.contentArea}>
           {/* COMPONENTE: HeroSection */}
-          <section className={styles.heroSection}>
-            <div className={styles.heroContent}>
-              <span className={styles.heroTag}>Meme do Dia</span>
-              <h2 className={styles.heroTitle}>{memeOfTheDay.title}</h2>
-              <p className={styles.heroDescription}>
-                {memeOfTheDay.description}
-              </p>
-              <div className={styles.heroAuthor}>
-                <img
-                  src={memeOfTheDay.authorAvatar}
-                  alt={memeOfTheDay.author}
-                />
-                <span>Por {memeOfTheDay.author}</span>
-              </div>
-              <div className={styles.heroStats}>
-                <span>❤️ {memeOfTheDay.likes}</span>
-                <span>💬 {memeOfTheDay.comments}</span>
-              </div>
-              <button className={styles.heroButton}>Ver meme completo</button>
-            </div>
-            <div className={styles.heroImageContainer}>
-              <img
-                src={memeOfTheDay.image}
-                alt={memeOfTheDay.title}
-                className={styles.heroImage}
-              />
-            </div>
-          </section>
+          <HeroSection />
           {/* FIM COMPONENTE: HeroSection */}
 
           {/* COMPONENTE: CategoriesSection */}
@@ -461,75 +404,7 @@ export default function Home() {
       </div>
 
       {/* COMPONENTE: Footer */}
-      <footer className={styles.footer}>
-        <div className={styles.footerTop}>
-          <div className={styles.footerLogo}>
-            <h2>MemeVerse</h2>
-            <p>O universo dos melhores memes da internet.</p>
-          </div>
-
-          <div className={styles.footerNavContainer}>
-            <div className={styles.footerNavSection}>
-              <h3>Navegação</h3>
-              <nav className={styles.footerNav}>
-                <a href="#">Home</a>
-                <a href="#">Trending</a>
-                <a href="#">Create</a>
-                <a href="#">Categories</a>
-                <a href="#">Profile</a>
-              </nav>
-            </div>
-
-            <div className={styles.footerNavSection}>
-              <h3>Recursos</h3>
-              <nav className={styles.footerNav}>
-                <a href="#">Editor de Memes</a>
-                <a href="#">Templates</a>
-                <a href="#">API</a>
-                <a href="#">Para Desenvolvedores</a>
-              </nav>
-            </div>
-
-            <div className={styles.footerNavSection}>
-              <h3>Empresa</h3>
-              <nav className={styles.footerNav}>
-                <a href="#">Sobre nós</a>
-                <a href="#">Carreiras</a>
-                <a href="#">Blog</a>
-                <a href="#">Contato</a>
-              </nav>
-            </div>
-
-            <div className={styles.footerNavSection}>
-              <h3>Legal</h3>
-              <nav className={styles.footerNav}>
-                <a href="#">Termos de Uso</a>
-                <a href="#">Privacidade</a>
-                <a href="#">Cookies</a>
-                <a href="#">LGPD</a>
-              </nav>
-            </div>
-          </div>
-        </div>
-
-        <div className={styles.footerBottom}>
-          <p>© 2025 MemeVerse - Todos os direitos reservados</p>
-          <div className={styles.socialLinks}>
-            <a href="#" className={styles.socialLink}>
-              <span>📱</span>
-            </a>
-            <a href="#" className={styles.socialLink}>
-              <span>📘</span>
-            </a>
-            <a href="#" className={styles.socialLink}>
-              <span>📸</span>
-            </a>
-            <a href="#" className={styles.socialLink}>
-              <span>🐦</span>
-            </a>
-          </div>
-        </div>
-      </footer>
+      <Footer />
       {/* FIM COMPONENTE: Footer */}
     </div>
   );
