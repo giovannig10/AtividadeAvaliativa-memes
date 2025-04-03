@@ -6,6 +6,9 @@ import CategoriesSection from "./components/categoriesSection";
 import Feed from "./components/feed";
 import FeaturedMemes from "./components/featuredMemes";
 import CreatorsSection from "./components/creatorsSection";
+import { News_Cycle } from "next/font/google";
+import Newsletter from "./components/newsLetter";
+import Sidebar from "./components/sidebar";
 
 
 export default function Home() {
@@ -13,21 +16,7 @@ export default function Home() {
 
   
 
-  // Eventos próximos
-  const upcomingEvents = [
-    {
-      id: 1,
-      title: "Competição de Memes 2025",
-      date: "15 de Maio, 2025",
-      participants: 356,
-    },
-    {
-      id: 2,
-      title: "Workshop: Como Criar Memes Virais",
-      date: "22 de Maio, 2025",
-      participants: 127,
-    },
-  ];
+ 
 
   return (
     <div className={styles.container}>
@@ -58,93 +47,12 @@ export default function Home() {
           {/* FIM COMPONENTE: CreatorsSection */}
 
           {/* COMPONENTE: NewsletterSection */}
-          <section className={styles.newsletterSection}>
-            <div className={styles.newsletterContent}>
-              <h2 className={styles.newsletterTitle}>Fique por dentro!</h2>
-              <p className={styles.newsletterDescription}>
-                Assine nossa newsletter e receba os melhores memes toda semana!
-              </p>
-              <div className={styles.newsletterForm}>
-                <input
-                  type="email"
-                  placeholder="Seu melhor e-mail"
-                  className={styles.newsletterInput}
-                />
-                <button className={styles.newsletterButton}>Assinar</button>
-              </div>
-              <p className={styles.newsletterDisclaimer}>
-                Nós respeitamos sua privacidade. Cancele quando quiser.
-              </p>
-            </div>
-            <div className={styles.newsletterImageContainer}>
-              <img
-                src="https://i.imgur.com/OELrGl5.jpg"
-                alt="Newsletter"
-                className={styles.newsletterImage}
-              />
-            </div>
-          </section>
+          <Newsletter />
           {/* FIM COMPONENTE: NewsletterSection */}
         </div>
 
         {/* COMPONENTE: Sidebar */}
-        <aside className={styles.sidebar}>
-          <div className={styles.sidebarSection}>
-            <h3 className={styles.sidebarTitle}>Eventos Próximos</h3>
-            {upcomingEvents.map((event) => (
-              // COMPONENTE: EventCard
-              <div key={event.id} className={styles.eventCard}>
-                <h4 className={styles.eventTitle}>{event.title}</h4>
-                <p className={styles.eventDate}>{event.date}</p>
-                <p className={styles.eventParticipants}>
-                  {event.participants} participantes
-                </p>
-                <button className={styles.eventButton}>Participar</button>
-              </div>
-              // FIM COMPONENTE: EventCard
-            ))}
-          </div>
-
-          <div className={styles.sidebarSection}>
-            <h3 className={styles.sidebarTitle}>MemeVerse Premium</h3>
-            <div className={styles.premiumCard}>
-              <h4 className={styles.premiumTitle}>
-                Desbloqueie recursos exclusivos!
-              </h4>
-              <ul className={styles.premiumFeatures}>
-                <li>Sem anúncios</li>
-                <li>Uploads ilimitados</li>
-                <li>Ferramentas de edição avançadas</li>
-                <li>Estatísticas detalhadas</li>
-              </ul>
-              <button className={styles.premiumButton}>
-                Experimentar Grátis
-              </button>
-            </div>
-          </div>
-
-          <div className={styles.sidebarSection}>
-            <h3 className={styles.sidebarTitle}>Tags Populares</h3>
-            <div className={styles.tagCloud}>
-              <span className={`${styles.tag} ${styles.tagLarge}`}>
-                #memeday
-              </span>
-              <span className={styles.tag}>#programação</span>
-              <span className={`${styles.tag} ${styles.tagMedium}`}>
-                #humor
-              </span>
-              <span className={styles.tag}>#escola</span>
-              <span className={`${styles.tag} ${styles.tagLarge}`}>
-                #trabalhoremoto
-              </span>
-              <span className={styles.tag}>#segundafeira</span>
-              <span className={`${styles.tag} ${styles.tagMedium}`}>
-                #games
-              </span>
-              <span className={styles.tag}>#nofilter</span>
-            </div>
-          </div>
-        </aside>
+        <Sidebar />
         {/* FIM COMPONENTE: Sidebar */}
       </div>
 
