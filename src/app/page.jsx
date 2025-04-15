@@ -46,6 +46,7 @@ export default function Home() {
     },
   ];
 
+
   
 
  
@@ -85,7 +86,7 @@ export default function Home() {
           {/* FIM COMPONENTE: FeaturedMemesSection */}
           
           {/* COMPONENTE: CreatorsSection */}
-          <CreatorsSection />
+          <CreatorsSection topCreators={topCreators}/>
           {/* FIM COMPONENTE: CreatorsSection */}
 
           {/* COMPONENTE: NewsletterSection */}
