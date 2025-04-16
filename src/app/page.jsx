@@ -205,7 +205,7 @@ export default function Home() {
           {/* FIM COMPONENTE: CategoriesSection */}
 
           {/* COMPONENTE: Feed */}
-         <Feed />
+         <Feed memes={memes}/>
           {/* FIM COMPONENTE: Feed */}
 
           
