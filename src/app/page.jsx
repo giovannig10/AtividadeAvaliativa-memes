@@ -222,7 +222,7 @@ export default function Home() {
         </div>
 
         {/* COMPONENTE: Sidebar */}
-        <Sidebar />
+        <Sidebar upcomingEvents={upcomingEvents}/>
         {/* FIM COMPONENTE: Sidebar */}
       </div>
 
