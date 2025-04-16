@@ -197,7 +197,7 @@ export default function Home() {
       <div className={styles.mainContent}>
         <div className={styles.contentArea}>
           {/* COMPONENTE: HeroSection */}
-          <HeroSection />
+          <HeroSection memeOfTheDay={memeOfTheDay}/>
           {/* FIM COMPONENTE: HeroSection */}
 
           {/* COMPONENTE: CategoriesSection */}
